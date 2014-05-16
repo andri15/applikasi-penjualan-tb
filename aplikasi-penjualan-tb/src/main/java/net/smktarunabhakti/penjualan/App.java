@@ -1,5 +1,8 @@
 package net.smktarunabhakti.penjualan;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 /**
  * Hello world!
@@ -7,8 +10,11 @@ package net.smktarunabhakti.penjualan;
  */
 public class App 
 {
+    private static ApplicationContext appCtx;
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        appCtx = new ClassPathXmlApplicationContext(
+                "classpath:net/smktarunabhakti/penjualan/"
+                + "applicationContext/xml");
     }
 }
